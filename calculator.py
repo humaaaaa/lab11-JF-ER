@@ -4,22 +4,11 @@ calculator.py
 
 One function per operation, in order.
 """
-def square_root(a):
-    try:
-        if a < 0:
-            raise ValueError
-        return math.sqrt(a)
-    except ValueError:
-        return None
-def hypotenuse(a, b):
-    try:
-        if a < 0 or b < 0:
-            raise ValueError
-    except ValueError:
-        return None
+import math
+
 def add(a, b): return a + b
-def subtract(a, b): return a - b
-def multiply(a, b): return a * b
+def subt(a, b): return a - b
+def mult(a, b): return a * b
 def divide(a, b):
     try:
         if a == 0:
@@ -34,4 +23,21 @@ def logarithm(a, b):
         return math.log(b, a)
     except ValueError:
         return None
+    except TypeError:
+        return None
 def exponent(a, b): return a**b
+def square_root(a):
+    try:
+        if a < 0:
+            raise ValueError
+        return math.sqrt(a)
+    except ValueError:
+        return None
+def hypotenuse(a, b):
+    try:
+        if a < 0 or b < 0:
+            raise ValueError
+        sub = a**2 + b**2
+        return math.sqrt(sub)
+    except ValueError:
+        return None

@@ -4,20 +4,7 @@ calculator.py
 
 One function per operation, in order.
 """
-import math
-def square_root(a):
-    try:
-        if a < 0:
-            raise ValueError
-        return math.sqrt(a)
-    except ValueError:
-        return None
-def hypotenuse(a, b):
-    try:
-        if a < 0 or b < 0:
-            raise ValueError
-    except ValueError:
-        return None
+
 def add(a, b): return a + b
 def subtract(a, b): return a - b
 def multiply(a, b): return a * b

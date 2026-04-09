@@ -7,9 +7,9 @@ One function per operation, in order.
 import math
 
 def add(a, b): return a + b
-def subt(a, b): return a - b
-def mult(a, b): return a * b
-def divide(a, b):
+def subtract(a, b): return a - b
+def mul(a, b): return a * b
+def div(a, b):
     try:
         if a == 0:
             raise ZeroDivisionError
@@ -25,7 +25,7 @@ def logarithm(a, b):
         return None
     except TypeError:
         return None
-def exponent(a, b): return a**b
+def exp(a, b): return a**b
 def square_root(a):
     try:
         if a < 0:
